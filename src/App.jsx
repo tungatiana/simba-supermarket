@@ -1,13 +1,13 @@
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Footer from "./components/Footer";
+
 function App() {
   return (
     <>
-      <h1 className="hero">Karibu Simba Supermarket!</h1>
-      <p className="hero">Fresh groceries, delivered across Kigali.</p>
-      <img
-        className="hero"
-        src="https://placehold.co/600x300"
-        alt="Simba Supermarket"
-      />
+      <Header />
+      <Hero />
+      <Footer />
     </>
   );
 }
