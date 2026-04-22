@@ -1,11 +1,15 @@
-// src/App.jsx
 function App() {
   return (
-    <div>
-      <h1>Karibu Simba Supermarket!</h1>
-      <p>Welcome to my first React app built with Vite.</p>
-    </div>
-  )
+    <>
+      <h1 className="hero">Karibu Simba Supermarket!</h1>
+      <p className="hero">Fresh groceries, delivered across Kigali.</p>
+      <img
+        className="hero"
+        src="https://placehold.co/600x300"
+        alt="Simba Supermarket"
+      />
+    </>
+  );
 }
 
-export default App
+export default App;
