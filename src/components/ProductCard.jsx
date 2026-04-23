@@ -1,17 +1,16 @@
-export default function ProductCard({ product }) {
-  const { name, priceRwf, image, inStock } = product;
-
-  const formattedPrice = new Intl.NumberFormat("en-RW", {
-    style: "currency",
-    currency: "RWF"
-  }).format(priceRwf);
+export default function ProductCard({ product, onAddToCart }) {
+  const { name, priceRwf, inStock } = product;
 
   return (
-    <div className="product-card">
-      <img src={image} alt={name} />
+    <article className="card">
       <h3>{name}</h3>
-      <p>{formattedPrice}</p>
-      {!inStock && <p style={{ color: "red" }}>Out of stock</p>}
-    </div>
+      <p>RWF {priceRwf}</p>
+
+      {!inStock && <span className="oos">Out of stock</span>}
+
+      <button onClick={() => onAddToCart(product)}>
+        Add to cart
+      </button>
+    </article>
   );
 }
