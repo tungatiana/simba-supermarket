@@ -6,7 +6,11 @@ export default function ProductCard({ product, onAddToCart }) {
       <h3>{name}</h3>
       <p>RWF {priceRwf}</p>
 
-      {!inStock && <span className="oos">Out of stock</span>}
+    {product.inStock ? (
+  <button>Add to cart</button>
+) : (
+  <button disabled>Out of stock</button>
+)}
 
       <button onClick={() => onAddToCart(product)}>
         Add to cart

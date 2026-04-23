@@ -182,3 +182,16 @@
     border-right-color: var(--border);
   }
 }
+.container {
+  padding: 20px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+button {
+  margin: 10px 0;
+}

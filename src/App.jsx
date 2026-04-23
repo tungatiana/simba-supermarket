@@ -25,9 +25,13 @@ function App() {
 
       <SearchBar value={search} onChange={setSearch} />
 
-      <button onClick={() => setShowSpecial(!showSpecial)}>
-        Show Today's Special
-      </button>
+<div className="container">
+        <Header />
+        <SearchBar value={search} onChange={setSearch} />
+        <button>Show Today’s Special</button>
+        <ProductList />
+</div>
+
 
       {showSpecial && (
         <ProductCard product={PRODUCTS[0]} onAddToCart={handleAddToCart} />
