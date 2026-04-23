@@ -6,6 +6,8 @@ import { PRODUCTS } from "./data/products";
 import { useState } from "react";
 
 function App() {
+        const [showSpecial, setShowSpecial] = useState(false);
+
   return (
     <>
       <Header />
