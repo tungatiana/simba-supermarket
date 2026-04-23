@@ -9,7 +9,7 @@ function App() {
   const [showSpecial, setShowSpecial] = useState(false);
 
   // Step 7: add-to-cart handler
-  const handleAddToCar = (product) => {
+  const handleAddToCart = (product) => {
     console.log("Added:", product.name);
   };
 
