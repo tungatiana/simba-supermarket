@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import ProductCard from "./components/ProductCard";
 import Footer from "./components/Footer";
+import ProductList from "./components/ProductList";
 
 function App() {
   const [showSpecial, setShowSpecial] = useState(false);
