@@ -1,6 +1,10 @@
 import SearchBar from "./components/SearchBar";
 import { useState } from "react";
 import { PRODUCTS } from "./data/products";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import ProductCard from "./components/ProductCard";
+import Footer from "./components/Footer";
 
 function App() {
   const [showSpecial, setShowSpecial] = useState(false);
