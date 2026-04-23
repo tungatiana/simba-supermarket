@@ -13,6 +13,13 @@ function App() {
       <Header />
       <Hero />
 
+<button onClick={() => setShowSpecial(!showSpecial)}>
+  Show Today's Special
+</button>
+        {showSpecial && (
+         <ProductCard product={PRODUCTS[0]} />
+)}
+
       <h2>Products</h2>
       <div className="product-grid">
         {PRODUCTS.map((product) => (
