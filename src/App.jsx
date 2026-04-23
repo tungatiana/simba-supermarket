@@ -1,38 +1,38 @@
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Footer from "./components/Footer";
-import ProductCard from "./components/ProductCard";
-import { PRODUCTS } from "./data/products";
+import SearchBar from "./components/SearchBar";
 import { useState } from "react";
+import { PRODUCTS } from "./data/products";
 
 function App() {
   const [showSpecial, setShowSpecial] = useState(false);
+  const [search, setSearch] = useState("");
 
-  // Step 7: add-to-cart handler
   const handleAddToCart = (product) => {
     console.log("Added:", product.name);
   };
+
+  const filteredProducts = PRODUCTS.filter((p) =>
+    p.name.toLowerCase().includes(search.toLowerCase())
+  );
 
   return (
     <>
       <Header />
       <Hero />
 
+      <SearchBar value={search} onChange={setSearch} />
+
       <button onClick={() => setShowSpecial(!showSpecial)}>
         Show Today's Special
       </button>
 
       {showSpecial && (
-        <ProductCard
-          product={PRODUCTS[0]}
-          onAddToCart={handleAddToCart}
-        />
+        <ProductCard product={PRODUCTS[0]} onAddToCart={handleAddToCart} />
       )}
 
       <h2>Products</h2>
 
       <div className="product-grid">
-        {PRODUCTS.map((product) => (
+        {filteredProducts.map((product) => (
           <ProductCard
             key={product.id}
             product={product}
@@ -45,5 +45,4 @@ function App() {
     </>
   );
 }
-
 export default App;
