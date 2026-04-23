@@ -1,10 +1,11 @@
-export default function ProductList({ products }) {
-  if (!products) return <p>No products available</p>;
+import Product from "./Product";
 
+export default function ProductList({ products }) {
+  if (!products) return null;
   return (
-    <div>
+    <div className="product-grid">
       {products.map((product) => (
-        <p key={product.id}>{product.name}</p>
+        <Product key={product.id} product={product} />
       ))}
     </div>
   );
