@@ -2,7 +2,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import ProductCard from "./components/ProductCard";
-import products from "./data/products";
+import { PRODUCTS } from "./data/products";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
 
       <h2>Products</h2>
       <div className="product-grid">
-        {products.map((product) => (
+        {PRODUCTS.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
