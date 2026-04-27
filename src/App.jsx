@@ -1,11 +1,12 @@
 import SearchBar from "./components/SearchBar";
+import "./App.css";
 import { useState } from "react";
-import { PRODUCTS } from "./data/products";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import ProductCard from "./components/ProductCard";
 import Footer from "./components/Footer";
 import ProductList from "./components/ProductList";
+import { PRODUCTS } from "./data/products.js";
 
 function App() {
   const [showSpecial, setShowSpecial] = useState(false);
@@ -26,13 +27,9 @@ function App() {
 
       <SearchBar value={search} onChange={setSearch} />
 
-<div className="container">
-        <Header />
-        <SearchBar value={search} onChange={setSearch} />
-        <button>Show Today’s Special</button>
-        <ProductList />
-</div>
-
+      <button onClick={() => setShowSpecial(!showSpecial)}>
+        Show Today’s Special
+      </button>
 
       {showSpecial && (
         <ProductCard product={PRODUCTS[0]} onAddToCart={handleAddToCart} />
@@ -40,18 +37,14 @@ function App() {
 
       <h2>Products</h2>
 
-      <div className="product-grid">
-        {filteredProducts.map((product) => (
-          <ProductCard
-            key={product.id}
-            product={product}
-            onAddToCart={handleAddToCart}
-          />
-        ))}
-      </div>
+      <ProductList
+        products={filteredProducts}
+        onAddToCart={handleAddToCart}
+      />
 
       <Footer />
     </>
   );
 }
+
 export default App;
