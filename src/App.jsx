@@ -23,9 +23,12 @@ function App() {
   );
 
   return (
-    <>
-      {/* <Header />
+    <div>
+      <Header />
       <Hero />
+
+      {/* Timer added here */}
+      <Timer />
 
       <SearchBar value={search} onChange={setSearch} />
 
@@ -34,7 +37,10 @@ function App() {
       </button>
 
       {showSpecial && (
-        <ProductCard product={PRODUCTS[0]} onAddToCart={handleAddToCart} />
+        <ProductCard
+          product={PRODUCTS[0]}
+          onAddToCart={handleAddToCart}
+        />
       )}
 
       <h2>Products</h2>
@@ -44,9 +50,10 @@ function App() {
         onAddToCart={handleAddToCart}
       />
 
-      <Footer /> */}
-      <UserForm/>
-    </>
+      <UserForm />
+
+      <Footer />
+    </div>
   );
 }
 
