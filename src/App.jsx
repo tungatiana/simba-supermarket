@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import ProductList from "./components/ProductList";
 import { PRODUCTS } from "./data/products.js";
 import UserForm from "./components/UseForm";
+import Timer from "./components/Timer";
 
 function App() {
   const [showSpecial, setShowSpecial] = useState(false);
