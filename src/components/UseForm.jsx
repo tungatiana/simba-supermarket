@@ -37,3 +37,4 @@ function UserForm() {
     </form>
   )
 }
+export default UserForm;

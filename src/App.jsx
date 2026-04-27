@@ -7,6 +7,7 @@ import ProductCard from "./components/ProductCard";
 import Footer from "./components/Footer";
 import ProductList from "./components/ProductList";
 import { PRODUCTS } from "./data/products.js";
+import UserForm from "./components/UseForm";
 
 function App() {
   const [showSpecial, setShowSpecial] = useState(false);
@@ -22,7 +23,7 @@ function App() {
 
   return (
     <>
-      <Header />
+      {/* <Header />
       <Hero />
 
       <SearchBar value={search} onChange={setSearch} />
@@ -42,7 +43,8 @@ function App() {
         onAddToCart={handleAddToCart}
       />
 
-      <Footer />
+      <Footer /> */}
+      <UserForm/>
     </>
   );
 }
